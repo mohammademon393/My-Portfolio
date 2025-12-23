@@ -6,6 +6,9 @@ import './index.css'
 import App from './App.jsx'
 import Root from './Layout/Root.jsx';
 import Home from './Pages/Home.jsx';
+import About from './Pages/About.jsx';
+import Service from './Pages/Service.jsx';
+import Demos from './Pages/Demos.jsx';
 
 
 
@@ -13,12 +16,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        index:true,
+        index: true,
         Component: Home,
       },
-    ]
+      {
+        path: "/about",
+        Component: About,
+      },
+      {
+        path: "/demos",
+        Component: Demos,
+      },
+      {
+        path: "/Service",
+        Component: Service,
+      },
+    ],
   },
 ]);
 

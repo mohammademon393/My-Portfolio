@@ -1,26 +1,54 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const Links = (
     <>
-      <li>
-        <NavLink to={"/"}>Home</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/about"}>About</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/service"}>Service</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/demo"}>Demo</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/contact"}>Contact</NavLink>
-      </li>
-    </>
-  );
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : ""
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : ""
+            }
+          >
+            About
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/demos"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : ""
+            }
+          >
+            Demos
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/service"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : ""
+            }
+          >
+            Service
+          </NavLink>
+        </li>
+      </>
+      );
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -56,7 +84,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        <Link className="btn btn-neutral" to={"contact"}>Contact Us</Link>
       </div>
     </div>
   );
