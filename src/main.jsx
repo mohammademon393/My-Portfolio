@@ -11,6 +11,7 @@ import Service from './Pages/Service.jsx';
 import Demos from './Pages/Projects.jsx';
 import Projects from './Pages/Projects.jsx';
 import Skills from './Pages/Skills.jsx';
+import Contact from './Components/Contact.jsx';
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: "/Service",
         Component: Service,
       },
+      {
+        path: "/contact",
+        Component: Contact,
+      }
     ],
   },
 ]);
