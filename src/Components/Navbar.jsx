@@ -99,12 +99,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-gradient-to-r from-[#010811] via-[#0a3a6e] to-[#010811] rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {Links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"> My
+          <a className="btn btn-ghost text-xl">
+            {" "}
+            My
             <span className="text-[#00C2FF]">Portfolio</span>
           </a>
         </div>
@@ -112,10 +114,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
         <div className="navbar-end">
-          <Link
-            className="btn bg-[#1C99FF] border-0 text-white"
-            to={"contact"}
-          >
+          <Link className="btn bg-[#1C99FF] border-0 text-white" to={"contact"}>
             <TfiHeadphoneAlt />
             Contact Us
           </Link>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import demo1 from "../assets/demo1.png";
+import demo2 from "../assets/demo2.png";
 
 const Banner = () => {
   const words = [
@@ -44,28 +46,32 @@ const Banner = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
       {/* Floating Preview Cards (Hidden on mobile) */}
-      <div className="hidden lg:block absolute left-10 top-20 rotate-[-5deg] shadow-2xl opacity-50 hover:opacity-100 transition-opacity">
-        <img
-          src="preview1.png"
-          alt="Demo 1"
-          className="w-64 rounded-lg border border-gray-700"
-        />
+      <div className="hidden lg:block absolute left-10 top-20 shadow-2xl ">
+        <a href="https://admirable-fudge-8e2ea3.netlify.app/">
+          <img
+            src={demo1}
+            alt="Demo 1"
+            className="w-64 rounded-lg border border-gray-700 hover:scale-110 transition-transform"
+          />
+        </a>
       </div>
-      <div className="hidden lg:block absolute right-10 top-20 rotate-[5deg] shadow-2xl opacity-50 hover:opacity-100 transition-opacity">
-        <img
-          src="preview2.png"
-          alt="Demo 2"
-          className="w-64 rounded-lg border border-gray-700"
-        />
+      <div className="hidden lg:block absolute right-10 top-20 shadow-2xl">
+        <a href="https://sunny-panda-8d6676.netlify.app/">
+          <img
+            src={demo2}
+            alt="Demo 2"
+            className="w-64 rounded-lg border border-gray-700 hover:scale-110 transition-transform"
+          />
+        </a>
       </div>
 
       {/* Main Content */}
-        <h3 className="text-left text-2xl font-semibold">
-            Hello, Welcome to My <span className="text-[#1C99FF]">Portfolio</span>
-        </h3>
+      <h3 className="text-left text-2xl font-semibold"><span className="text-[#1C99FF]">Hi,</span> I am
+      </h3>
       <div className="text-center font-bold text-white text-5xl md:text-5xl leading-tight">
         <h1>
-          I'm Habibur Rahman Emon<br />
+          M. Habibur Rahman Emon
+          <br />
           For{" "}
           <span className="text-[#1C99FF] border-r-4 border-[#1C99FF] pr-1">
             {currentText}
