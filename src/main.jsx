@@ -8,7 +8,9 @@ import Root from './Layout/Root.jsx';
 import Home from './Pages/Home.jsx';
 import About from './Pages/About.jsx';
 import Service from './Pages/Service.jsx';
-import Demos from './Pages/Demos.jsx';
+import Demos from './Pages/Projects.jsx';
+import Projects from './Pages/Projects.jsx';
+import Skills from './Pages/Skills.jsx';
 
 
 
@@ -26,8 +28,12 @@ const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: "/demos",
-        Component: Demos,
+        path: "/projects",
+        Component: Projects,
+      },
+      {
+        path: "skills",
+        Component: Skills,
       },
       {
         path: "/Service",

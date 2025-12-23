@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Demos = () => {
+const Skills = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Demos = () => {
     );
 };
 
-export default Demos;
+export default Skills;

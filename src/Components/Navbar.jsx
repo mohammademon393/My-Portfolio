@@ -1,54 +1,79 @@
 import React from "react";
+import { FaUser } from "react-icons/fa";
+import { FaDiagramProject } from "react-icons/fa6";
+import { FcViewDetails } from "react-icons/fc";
+import { GiSkills } from "react-icons/gi";
+import { GrServices } from "react-icons/gr";
+import { HiViewGrid } from "react-icons/hi";
+import { IoIosHome } from "react-icons/io";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const Links = (
     <>
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : ""
-            }
-          >
-            Home
-          </NavLink>
-        </li>
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : ""
+          }
+        >
+          {" "}
+          <IoIosHome />
+          Home
+        </NavLink>
+      </li>
 
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : ""
-            }
-          >
-            About
-          </NavLink>
-        </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : ""
+          }
+        >
+          <FaUser />
+          About
+        </NavLink>
+      </li>
 
-        <li>
-          <NavLink
-            to="/demos"
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : ""
-            }
-          >
-            Demos
-          </NavLink>
-        </li>
+      <li>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : ""
+          }
+        >
+          <FaDiagramProject />
+          Projects
+        </NavLink>
+      </li>
 
-        <li>
-          <NavLink
-            to="/service"
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : ""
-            }
-          >
-            Service
-          </NavLink>
-        </li>
-      </>
-      );
+      <li>
+        <NavLink
+          to="/skills"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : ""
+          }
+        >
+          <GiSkills />
+          Skills
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/service"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : ""
+          }
+        >
+          <GrServices />
+          Service
+        </NavLink>
+      </li>
+    </>
+  );
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -84,7 +109,10 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn btn-neutral" to={"contact"}>Contact Us</Link>
+        <Link className="btn btn-neutral" to={"contact"}>
+          <TfiHeadphoneAlt />
+          Contact Us
+        </Link>
       </div>
     </div>
   );
